@@ -1,0 +1,37 @@
+#+TITLE: LLDP パケットをパース/生成するには
+#+FILETAGS: KOBACHI
+#+ICALENDAR_EXCLUDE_TAGS: noex
+
+
+LLDP パケットのパースや生成には pio という gem を使う．
+
+* パース
+
+たとえば，パースするには =Pio::Lldp.read= メソッドにパケットのバイナリ
+リテラルを渡す．パースに成功すると，lldp の各フィールドをアクセサメソッ
+ドで参照できる．
+
+#+BEGIN_SRC ruby
+require "pio"
+
+lldp = Pio::Lldp.read( binary_data )
+
+lldp.ttl #=> 120
+#+END_SRC
+
+* 生成
+
+LLDP フレームを生成するには =Pio::Lldp.new= メソッドを使う．指定したい
+オプションは引数として次のように渡す．
+
+#+BEGIN_SRC ruby
+require "pio"
+
+lldp = Pio::Lldp.new( dpid: 0x123, port_number: 12 )
+lldp.to_binary  #=> LLDP frame in binary format.
+#+END_SRC
+
+* 使用例
+
+http://github.com/yasuhito/ruby_topology/ が Pio の Lldp クラスを使って
+いる．
