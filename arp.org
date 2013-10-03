@@ -1,0 +1,44 @@
+#+TITLE: ARP パケットをパース/生成するには
+#+FILETAGS: KOBACHI
+#+ICALENDAR_EXCLUDE_TAGS: noex
+
+
+ARP パケットのパースや生成には pio という gem を使う．
+
+* パース
+
+パースするには =Pio::Arp.read= メソッドにパケットのバイナリリテラルを渡
+す．パースに成功すると，ARP の各フィールドをアクセサメソッドで参照でき
+る．
+
+#+BEGIN_SRC ruby
+require "pio"
+
+arp = Pio::Arp.read( binary_data )
+arp.source_mac.to_s #=> "00:26:82:eb:ea:d1"
+#+END_SRC
+
+* 生成
+
+ARP Request や ARP Reply を生成するには =Pio::Arp::Request.new= や
+=Pio::Arp::Reply.new= メソッドを使う．指定したいオプションは引数として
+次のように渡す．
+
+#+BEGIN_SRC ruby
+require "pio"
+
+request = Pio::Arp::Request.new(
+  source_mac: "00:26:82:eb:ea:d1",
+  sender_protocol_address: "192.168.83.3",
+  target_protocol_address: "192.168.83.254"
+)
+request.to_binary  #=> Arp Request frame in binary format.
+
+reply = Pio::Arp::Reply.new(
+  source_mac: "00:26:82:eb:ea:d1",
+  destination_mac: "00:26:82:eb:ea:d1",
+  sender_protocol_address: "192.168.83.3",
+  target_protocol_address: "192.168.83.254"
+)
+reply.to_binary  #=> Arp Reply frame in binary format.
+#+END_SRC
