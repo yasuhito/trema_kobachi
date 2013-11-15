@@ -1,22 +1,24 @@
 #+TITLE: Trema Kobachi
 
-- ベンダ拡張を使うには
-- トラフィック情報を取得するには
-- [[./lldp.org][LLDP を生成/パースするには]]
-- [[./arp.org][ARP を生成/パースするには]]
-- ICMP を生成/パースするには
-- コントローラのログを取るには
-- コントローラの名前を取得するには
-- capistrano を使って、コントローラを git から自動リリースするには
-- irb でデバッグするには
-- pry でデバッグするには
-- フリー版とれま本を読むには
-- コントローラの情報を sqlite に入れるには
-- プロアクティブにフローを打ち込むには
-- パスを張るには
-- VLAN ID を書き換えるには
-- Sinatraを使って、REST APIを実装するには
-- Rails で Web インタフェースを作るには
-- Sinatra で Web インタフェースを作るには
-- trema を強制終了するには
-- Trema-Edgeでフローエントリを作るには
+* TODO ベンダ拡張を使うには
+https://basecamp.com/1799632/projects/379282/messages/12426569-trema
+* TODO トラフィック情報を取得するには
+https://basecamp.com/1799632/projects/379282/messages/12589065-traffic-monitor
+* TODO [[./lldp.org][LLDP を生成/パースするには]]
+* TODO [[./arp.org][ARP を生成/パースするには]]
+* TODO ICMP を生成/パースするには
+* TODO コントローラのログを取るには
+* TODO コントローラの名前を取得するには
+* TODO capistrano を使って、コントローラを git から自動リリースするには
+* TODO irb でデバッグするには
+* TODO pry でデバッグするには
+* TODO フリー版とれま本を読むには
+* TODO コントローラの情報を sqlite に入れるには
+* TODO プロアクティブにフローを打ち込むには
+* TODO パスを張るには
+* TODO VLAN ID を書き換えるには
+* TODO Sinatraを使って、REST APIを実装するには
+* TODO Rails で Web インタフェースを作るには
+* TODO Sinatra で Web インタフェースを作るには
+* TODO trema を強制終了するには
+* TODO Trema-Edgeでフローエントリを作るには
