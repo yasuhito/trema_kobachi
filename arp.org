@@ -42,3 +42,7 @@ reply = Pio::Arp::Reply.new(
 )
 reply.to_binary  #=> Arp Reply frame in binary format.
 #+END_SRC
+
+* ARP の仕様
+
+http://www.n-study.com/network/arpheader.htm
