@@ -6,6 +6,8 @@ https://basecamp.com/1799632/projects/379282/messages/12426569-trema
 https://basecamp.com/1799632/projects/379282/messages/12589065-traffic-monitor
 * TODO [[./lldp.org][LLDP を生成/パースするには]]
 * TODO [[./arp.org][ARP を生成/パースするには]]
+* TODO DHCP を生成/パースするには
+* TODO DHCPサーバをtremaで書くには
 * TODO ICMP を生成/パースするには
 * TODO コントローラのログを取るには
 * TODO コントローラの名前を取得するには
